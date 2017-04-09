@@ -22,7 +22,7 @@ class motor{
 	
 	public static void main(String[] args){
 		//Method class Kendaraan Motor
-		motor MotorEddy=new motor(); //Kelas yang Dibuat
+		motor MotorEddy=new motor(); //Object yang Dibuat
 		MotorEddy.warna="Hitam"; //Memakai data warna
 		MotorEddy.merk="Honda Blade"; //Memakai data Merk
 		MotorEddy.type="Motor Bebek"; //Memakai data Type
