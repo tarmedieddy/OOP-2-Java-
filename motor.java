@@ -1,13 +1,48 @@
 //Nama  : Tarmedi
 //Kelas : TIF W14
 
-class motor{
+class superC{
+	public void tampilkan(){
+		System.out.println("Ini Tampilan dari SuperClass Motor");
+	}
+}
+
+public class motor extends superC{
 	//Atribut class pada motor{
 	String warna;
 	String merk;
 	String type;
 	int tahun;
 	
+	public motor(String warna,String merk,String type){
+		this.warna=warna;
+		this.merk=merk;
+		this.type=type;
+	}
+
+	public String getwarna(){
+		return warna;
+	}
+
+	public String getmerk(){
+		return merk;
+	}
+
+	public String gettype(){
+		return type;
+	}
+	
+	public void	tampilkan(){
+		System.out.println("Ini tampilan dari SuperChild Motor");
+	}
+
+	public void superC(){
+		tampilkan();
+		super.tampilkan();
+		System.out.println("Nilai dari variables num pada Sub kelas " + tahun);
+		System.out.println("Nilai dari variables num pada Super kelas " + super.tahun);
+	}
+
 	void hidupkanMesin(){
 		System.out.println("Mesin Motor Hidup");
 	}
@@ -22,7 +57,7 @@ class motor{
 	
 	public static void main(String[] args){
 		//Method class Kendaraan Motor
-		motor MotorEddy=new motor(); //Object yang Dibuat
+		motor MotorEddy=new motor(); //Kelas yang Dibuat
 		MotorEddy.warna="Hitam"; //Memakai data warna
 		MotorEddy.merk="Honda Blade"; //Memakai data Merk
 		MotorEddy.type="Motor Bebek"; //Memakai data Type
